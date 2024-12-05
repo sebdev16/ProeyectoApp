@@ -56,6 +56,9 @@ dependencies {
     //Corrutinas para android
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     // Room con soporte para flow
+
+    // splash
+    implementation("androidx.core:core-splashscreen:1.0.0")
     implementation("androidx.room:room-ktx:2.5.2")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -68,6 +71,7 @@ dependencies {
     implementation(libs.androidx.room.common)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
