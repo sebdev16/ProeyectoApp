@@ -48,12 +48,11 @@ class MainActivity : ComponentActivity() {
 
 
 
-
-
 @Composable
 fun MainScreen(viewModel: ParidoViewModel = viewModel()) {
     val partidos by viewModel.partidos.observeAsState(emptyList())
-    val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+    val dateFormat = SimpleDateFormat("dd/MM/yyyy")
+    //val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
 
     Scaffold(
         floatingActionButton = {
