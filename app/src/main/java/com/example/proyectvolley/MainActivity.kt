@@ -35,7 +35,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ProyectVolleyTheme {
-                MainScreen()
+                MainScreen()//aqui le paso el viewmodel
             }
         }
     }
