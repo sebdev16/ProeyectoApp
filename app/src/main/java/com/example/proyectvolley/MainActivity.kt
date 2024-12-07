@@ -35,12 +35,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ProyectVolleyTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                MainScreen()
             }
         }
     }
@@ -63,7 +58,9 @@ fun MainScreen(viewModel: ParidoViewModel = viewModel()) {
         content = { padding ->
             LazyColumn(modifier = Modifier.padding(padding)) {
                 items(partidos) { partido ->
-                    Card(modifier = Modifier.fillMaxWidth().padding(8.dp)) {
+                    Card(modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(8.dp)) {
                         Column(modifier = Modifier.padding(16.dp)) {
                             Text(text = "${partido.equipoA} vs ${partido.equipoB}", style = MaterialTheme.typography.titleMedium)
                             Text(text = "Marcador: ${partido.marcadorA} - ${partido.marcadorB}", style = MaterialTheme.typography.bodyMedium)
